@@ -1,0 +1,87 @@
+paragraph {
+	color: #FF5733;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
+pre {
+  overflow: auto;
+}
+pre > code {
+  display: block;
+  padding: 1rem;
+  word-wrap: normal;
+}
+
+figcaption{
+	color: #581845;
+	font-size: 17;
+	font-weight: bold;
+	text-align:center;
+	font-family: 'Courier New', monospace;
+}
+
+heading1 {
+	color: #FFC300;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Corben', Georgia, Times, serif;
+}
+
+#mainDiv{
+	margin: auto;
+	width: 50%; 
+	height: auto; 
+	background: white; 
+	padding: 1%;
+	border: 0px;
+}
+
+#container{
+	text-align:center;
+}
+
+.buttons{
+	border: none;
+	color: #DAF7A6;
+	background-color: #C70039;
+	padding: 15px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.code{
+	font-family: 'Courier New', monospace;
+	text-align: center;
+	display: block;
+	font-weight: bold;
+	color: #900C3F;
+}
+
+.stuff{
+	flex: 1 1 0px;
+}
+
+.stuff2{
+	flex: 1 1 0px;
+	cursor: pointer;
+	color:blue;
+	text-decoration: underline;
+}
+
+stuff2:hover{
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #555;
+}
+
+#myStuff{
+	text-align: middle;
+	font-size: 25px;
+	display: flex;
+	flex-direction: row;
+}
