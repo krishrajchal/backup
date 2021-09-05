@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="myCSS.css">
+		<link href="https://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js"></script>
+	</head>
+	<body>
+		<!-- src=https://stackoverflow.com/questions/23758346/how-to-place-the-html-rectangualar-box-at-the-center-of-the-page/23758530#:~:text=6%20Answers&text=position%20absolute%2C%20left%2050%25%20and,the%20middle%20of%20the%20screen.-->
+		<div id="mainDiv">
+			<h1>
+				<img src="binary.jpg" style="width:100%; height:300px;">
+				<div id="myStuff">
+					<h3 class="stuff"><a href="https://krishrajchal.github.io/MyGithubProjects/">Projects</a></h3>
+					<h3 class="stuff2" id="info">Contact<h3>
+					<a href="https://krishrajchal.github.io/resume/" class="stuff">Resume</a>
+				</div>
+			</h1>
+			<div id="container">
+			<heading1 id="heading">
+			A short description: <br>
+			</heading1>
+			<paragraph id="text">
+					Hi, my name is Krish. I like to code, write,  do math, reading, cooking, and biking. 
+					I do college-level coding. My latest project in coding is a program that copies any files
+					with the extension .cpp and .py. The program then, uploads those files to Github. I usually
+					write in the morning on weekdays except for Friday. I sometimes read at night. I can cook
+					the usual food like pizza, sandwiches, burritos and other yummy foods.I code in C++, C#, 
+					Python, Java, and JavaScript. I also have power to change this text!!!
+			</paragraph>
+			<br></br>
+			<div>
+				<button class="buttons" id="button">
+					See, click me!!!
+				</button>
+			</div>
+			<div>
+				<button class="buttons" id="showCode">
+					And click me too!!!
+				</button>
+			</div>
+			
+			<div id="allCode">
+				<figure id="JavaScript">
+				<!-- src = https://websemantics.uk/articles/displaying-code-in-web-pages/ -->
+					<pre class="snippet-code">
+						<cap> 
+							This is my JavaScript code <br>
+						</cap>
+						<code id="javaScriptCode" style="text-align=left;display=block;border=2;" class="hljs language-javascript">
+document.getElementById("button").onclick = function() {changeText()};
+$("#allCode").hide();
+$("#email").hide();
+$.backstretch("codePic.png");
+$(document).ready(function(){
+	$("#showCode").click(function(){
+		$("#allCode").fadeToggle("slow", "linear");
+	});
+});
+
+var i = 0;
+var o = 0;
+var start = document.getElementById("text").innerHTML;
+var code = false;
+
+function t2b(str) {
+    return str.split('').map(function (char) {
+        return char.charCodeAt(0).toString(2);
+    }).join(' ');
+}
+
+function triggerColor(ele){
+	localStorage.col = "purple";
+	ele.style.color = localStorage.col;
+}
+
+email = document.getElementById("info");
+
+email.addEventListener("click", function (){
+	if(email.innerHTML == "Contact"){
+		email.innerHTML = "krishrajchal@gmail.com";
+		if(localStorage.col){
+			triggerColor(email);
+		}
+	}
+	else{
+		email.innerHTML = "Contact";
+	}
+})
+function reverse(str){
+	return str.split("").reverse().join("");
+}
+
+function changeText(){
+	switch(i){
+		case 0:
+			document.getElementById("text").innerHTML = t2b(start+'');
+			document.getElementById("heading").innerHTML = t2b("A short description:") + "<br>";
+			i++;
+			break;
+			
+		case 1:
+			document.getElementById("text").innerHTML = reverse(start.toString());
+			document.getElementById("heading").innerHTML = reverse("A short description:") + "<br>";
+			i++;
+			break;
+			
+		case 2:
+			if(o == 1){
+				document.getElementById("text").innerHTML = "Reeeeally, you thought AGAIN that I would trick you.";
+				document.getElementById("heading").innerHTML = "Don't do that again. That was predictable.<br>";
+				i++;
+				o++;
+				break;
+			}
+			
+			else if(o >= 1){
+				document.getElementById("text").innerHTML = "I am disapointed in you (I mean that in a funny way).";
+				document.getElementById("heading").innerHTML = "I am disapointed in you.<br>";
+				i++;
+				break;
+			}
+			document.getElementById("text").innerHTML = "Ha ha ha! I tricked you! You thought you would see: <br>" + start + "!!!";
+			document.getElementById("heading").innerHTML = "Ha ha ha!!!<br>";
+			i++;
+			if(o == 0){
+				o++
+			}
+			break;
+			
+		case 3:
+			document.getElementById("text").innerHTML = start;
+			document.getElementById("heading").innerHTML = "A short description:<br>";
+			i = 0;
+			break;
+		
+	}
+}
+						</code>
+					</pre>
+					</p>
+				</figure>
+				
+				<div id="HTML">
+					<figure>
+					<pre class="snippet-code">
+						<cap> 
+							This is my HTML code <br>
+						</cap>
+						<code style="text-align=left;display=block;border=2;" class="hljs language-html">
+&lt!DOCTYPE html&gt
+&lthtml&gt
+	&lthead&gt
+		&ltlink rel="stylesheet" href="myCSS.css"&gt
+		&ltlink href="https://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css"&gt
+		&ltlink href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css"&gt
+		&ltscript src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt&lt/script&gt
+		&ltscript src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js"&gt&lt/script&gt
+	&lt/head&gt
+	&ltbody&gt
+		&lt!-- src=https://stackoverflow.com/questions/23758346/how-to-place-the-html-rectangualar-box-at-the-center-of-the-page/23758530#:~:text=6%20Answers&text=position%20absolute%2C%20left%2050%25%20and,the%20middle%20of%20the%20screen.--&gt
+		&ltdiv id="mainDiv"&gt
+			&lth1&gt
+			&ltimg src="binary.jpg" style="width:100%; height:300px;"&gt
+			&ltdiv id="myStuff"&gt
+				&lth3 class="stuff"&gt&lta href="https://krishrajchal.github.io/MyGithubProjects/"&gtProjects&lt/a&gt&lt/h3&gt
+				&lth3 class="stuff2" id="info"&gtContact&lth3&gt
+				&lta href="https://krishrajchal.github.io/resume/" class="stuff"&gtResume&lt/a&gt
+			&lt/div&gt
+			&lt/h1&gt
+			&ltdiv id="container"&gt
+				&ltheading1 id="heading"&gt
+				A short description: &ltbr&gt
+				&lt/heading1&gt
+				&ltparagraph id="text"&gt
+				Hi, my name is Krish. I like to code, write,  do math, reading, cooking, and biking.
+				I do college-level coding. My latest project in coding is a program that copies any files
+				with the extension .cpp and .py. The program then, uploads those files to Github. I usually
+				write in the morning on weekdays except for Friday. I sometimes read at night. I can cook
+				the usual food like pizza, sandwiches, burritos and other yummy foods.I code in C++, C#,
+				Python, and JavaScript. I also have power to change this text!!!
+				&lt/paragraph&gt
+				&ltbr&gt&lt/br&gt
+			&ltdiv&gt
+				&ltbutton class="buttons" id="button"&gt
+				See, click me!!!
+				&lt/button&gt
+			&lt/div&gt
+			&ltdiv&gt
+				&ltbutton class="buttons" id="showCode"&gt
+				And click me too!!!
+				&lt/button&gt
+			&lt/div&gt
+			&lt/div&gt
+		&lt/div&gt
+		&ltscript src="myJavaScript.js"&gt&lt/script&gt
+	&lt/body&gt
+&lt/html&gt
+						</code>
+						</pre>
+					</figure>
+				</div>
+				
+				<div id="CSS">
+					<figure>
+						<pre class="snippet-code">
+						<cap> 
+							This is my CSS code <br>
+						</cap>
+						<code style="text-align=left;display=block;border=2;" class="hljs language-css">
+paragraph {
+	color: #FF5733;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
+pre {
+  overflow: auto;
+}
+pre > code {
+  display: block;
+  padding: 1rem;
+  word-wrap: normal;
+}
+
+figcaption{
+	color: #581845;
+	font-size: 17;
+	font-weight: bold;
+	text-align:center;
+	font-family: 'Courier New', monospace;
+}
+
+heading1 {
+	color: #FFC300;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Corben', Georgia, Times, serif;
+}
+
+#mainDiv{
+	margin: auto;
+	width: 50%; 
+	height: auto; 
+	background: white; 
+	padding: 1%;
+	border: 0px;
+}
+
+#container{
+	text-align:center;
+}
+
+.buttons{
+	border: none;
+	color: #DAF7A6;
+	background-color: #C70039;
+	padding: 15px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.code{
+	font-family: 'Courier New', monospace;
+	text-align: center;
+	display: block;
+	font-weight: bold;
+	color: #900C3F;
+}
+
+.stuff{
+	flex: 1 1 0px;
+}
+
+.stuff2{
+	flex: 1 1 0px;
+	cursor: pointer;
+	color:blue;
+	text-decoration: underline;
+}
+
+stuff2:hover{
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #555;
+}
+
+#myStuff{
+	text-align: middle;
+	font-size: 25px;
+	display: flex;
+	flex-direction: row;
+}
+						</code>
+					</figure>
+				</div>
+			</div>
+		</div>
+		</div>
+		<script src="myJavaScript.js"></script>
+	</body>
+</html>
